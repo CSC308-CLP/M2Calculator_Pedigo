@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		554D35DB2F44CC86008473C7 /* M5Optionals_Pedigo.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = M5Optionals_Pedigo.playground; path = /Users/charles_pedigo/Desktop/CSC308/Module5/Swift/M5Optionals_Pedigo.playground; sourceTree = "<absolute>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		558A0DAE2F291E3800E5F2FE /* M2Calculator_Pedigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M2Calculator_Pedigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -45,6 +46,7 @@
 		558A0DA52F291E3800E5F2FE = {
 			isa = PBXGroup;
 			children = (
+				554D35DB2F44CC86008473C7 /* M5Optionals_Pedigo.playground */,
 				558A0DB02F291E3800E5F2FE /* M2Calculator_Pedigo */,
 				558A0DAF2F291E3800E5F2FE /* Products */,
 			);
