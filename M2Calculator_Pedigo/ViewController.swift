@@ -38,17 +38,28 @@ class ViewController: UIViewController {
         
     }
     @IBOutlet weak var resultLabel: UILabel!
+    
+    func showAlert(message: String){
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
     @IBAction func resultButton(_ sender: Any) {
 //        let op1 = Int(operand1TextField.text!)!
 //        let op2 = Int(operand2TextField.text!)!
 //        let op = selectOperator.title(for: .normal)!
         guard let op1 = operand1TextField.text, let a = Int(op1)else{
+            showAlert(message: "Please enter a number.")
             return
         }
         guard let op2 = operand2TextField.text, let b = Int(op2)else{
+            showAlert(message: "Please enter a number.")
             return
         }
-        guard let op = selectOperator.title(for: .normal) else{
+        guard let op = selectOperator.title(for: .normal), op != "?" else{
+            showAlert(message: "Please select an operator.")
             return
         }
         
@@ -63,6 +74,7 @@ class ViewController: UIViewController {
         case "/":
             result = a / b
         default:
+            showAlert(message: "Please select an operator.")
             print("Please select an Operator")
         }
         guard let result = result else{
